@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+/** Service menu xml
+ * @package   Custom_Service
+ * @author    ClaudioC
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Custom_Service::manager" title="Custom Service" module="Custom_Service" sortOrder="10" resource="Custom_Service::manager" />
+        <add id="Custom_Service::add_row" title="Log" module="Custom_Service" sortOrder="20" parent="Custom_Service::manager" action="service/grid" resource="Custom_Service::add_row"/>
+    </menu>
+</config>

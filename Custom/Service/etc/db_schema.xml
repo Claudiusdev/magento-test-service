@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+  <table name="custom_service_log" engine="innodb" comment="LOGQUANTITYUPDATEs">
+    <column name="entity_id" xsi:type="int" comment="entity_id" nullable="true" identity="true" unsigned="true" padding="10"/>
+    <column name="sku" xsi:type="varchar" comment="sku" nullable="true"/>
+    <column name="quantity" xsi:type="int" comment="quantity" nullable="true"/>
+    <column name="status" xsi:type="smallint" comment="status" nullable="true"/>
+    <column name="error_message" xsi:type="varchar" comment="error_message" nullable="true"/>
+    <column name="created_at" xsi:type="timestamp" comment="created_at" nullable="true" default="CURRENT_TIMESTAMP"/>
+    <constraint xsi:type="primary" referenceId="PRIMARY">
+      <column name="entity_id"/>
+    </constraint>
+    <index referenceId="LOG_QUANTITY_UPDATE_SKU" indexType="fulltext">
+      <column name="sku"/>
+    </index>
+  </table>
+</schema>

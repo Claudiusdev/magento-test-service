@@ -1,0 +1,17 @@
+{
+    "log_quantity_update": {
+        "column": {
+            "entity_id": true,
+            "sku": true,
+            "status": true,
+            "error_message": true,
+            "created_at": true
+        },
+        "constaint": {
+            "PRIMARY": true
+        },
+        "search": {
+            "LOG_QUANTITY_UPDATE_SKU": true
+        }
+    }
+}
